@@ -135,3 +135,9 @@ https://notabug.org/owl410/owl_dotfiles/src/master/bspwm/bspwm_tokio_night
 
 https://www.youtube.com/watch?v=i9M94y8PIsU
 
+```
+sudo pacman -S xorg xorg-xinit mesa bspwm sxhkd alacritty numlockx nitrogen thunar unzip lxappearance scrot  
+```
+
+```
+sudo pacman -S xf86-video-intel nvidia nvidia-settings nvidia-utils
