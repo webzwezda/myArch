@@ -90,7 +90,7 @@ vim /etc/hosts
 Users & Passwords
 
 ```
-passwd 4111  
+passwd 4114 
 useradd -m webzwezda  
 passwd webzwezda 4114  
 usermod -aG wheel,audio,video,optical,storage webzwezda  
