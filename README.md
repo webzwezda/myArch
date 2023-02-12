@@ -4,8 +4,9 @@
 ip link  
 iwctl
 station wlan0 connect RT-5WiFi-0C6C
+2817006250 
 exit  
-ping google.com
+ping -c 3 google.com
 ```
 
 ```
@@ -69,6 +70,14 @@ genfstab -U /mnt \>\> /mnt/etc/fstab
 vim /mnt/etc/fstab  
 arch-chroot /mnt (Меняем корневой каталог)
 ```
+
+если что то пошло не так, загружаемся снова, подкидываем интернет и монтируем корень
+
+```
+mount /dev/sda2 /mnt
+arch-chroot /mnt
+```
+
 
 ```
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime  
