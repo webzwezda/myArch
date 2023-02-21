@@ -61,7 +61,7 @@ mount /dev/sda1 /mnt/boot
 mount /dev/sdb1 /mnt/home
 ```
 
-Установка базовых пакетов
+
 
 ```
 pacstrap /mnt base linux linux-firmware  
@@ -71,30 +71,13 @@ vim /mnt/etc/fstab
 arch-chroot /mnt (Меняем корневой каталог)
 ```
 
-если что то пошло не так, загружаемся снова, подкидываем интернет и монтируем корень
-
-```
-mount /dev/sda2 /mnt
-arch-chroot /mnt
-```
 
 
-```
-ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime  
-ls /usr/share/zoneinfo  
-hwclock --systohc  
-pacman -S vim    
-vim /etc/locale.gen  
-en_US.UTF-8 UTF-8  
-ru_RU.UTF-8 UTF-8  
-locale-gen  
-echo "LANG=en_US.UTF-8" \> /etc/locale.conf  
-vim /etc/hostname (Сюда пишем имя компьютера) myArch  
-vim /etc/hosts  
-127.0.0.1   localhost  
-::1         localhost  
-127.0.1.1   myArch.localdomain    myArch
-```
+
+
+
+
+
 
 Users & Passwords
 
@@ -113,8 +96,7 @@ visudo
 Grub
 
 ```
-pacman -S grub  
-pacman -S efibootmgr dosfstools os-prober mtools  
+
 mkdir /boot/EFI  
 mount /dev/sda1 /boot/EFI  
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck  
@@ -138,15 +120,13 @@ sudo pacman -S ttf-jetbrains-mono
 sudo shutdown now
 ```
 
-https://wiki.archlinux.org/title/Iwd_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)  
   
-https://notabug.org/owl410/owl_dotfiles/src/master/bspwm/bspwm_tokio_night  
+  
 
-https://www.youtube.com/watch?v=i9M94y8PIsU
 
 ```
 sudo pacman -S xorg xorg-xinit mesa bspwm sxhkd alacritty numlockx nitrogen thunar unzip lxappearance scrot  
 ```
 
 ```
-sudo pacman -S xf86-video-intel nvidia nvidia-settings nvidia-utils
+
